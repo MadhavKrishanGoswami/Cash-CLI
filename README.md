@@ -1,5 +1,5 @@
 <p align="center">
-<!--   <img src="https://i.imgur.com/ddhPSQ4.png" height="64"> -->
+  <img src="https://i.imgur.com/ddhPSQ4.png" height="64">
   <h3 align="center">Cash-CLI</h3>
   <p align="center">Convert Currency Rates directly from your Terminal!
 
