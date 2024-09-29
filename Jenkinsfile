@@ -6,7 +6,7 @@ pipeline {
           steps{
             echo "Build"
             sh '''
-              go mod vender
+              go mod vendor
               go mod tidy
               go build -o Cash-CLI
             '''
