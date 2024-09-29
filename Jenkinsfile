@@ -1,6 +1,10 @@
 
 pipeline {
     agent any
+    tools {
+        go 'Go-1.20'         // Adjust to your installed Go version in Jenkins
+        dockerTool 'Docker'   // Adjust to your installed Docker tool in Jenkins
+    }
     stages {
         stage('Build') {
           steps{
