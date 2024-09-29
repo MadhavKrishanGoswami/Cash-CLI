@@ -11,7 +11,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o cash-cli .
 FROM scratch
 WORKDIR /root/
 COPY --from=builder /app/cash-cli .
-
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 # Set the terminal for color support (if necessary)
 ENV TERM=xterm-256color
 

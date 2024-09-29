@@ -57,8 +57,7 @@ This is a command-line interface (CLI) currency converter built with Go. The pro
    ```
 2. Run the Docker image:
    ```
-   docker run -it --name cash-cli cash-cli
-   ```
+   docker run --rm -it --name cash-cli madhavkrishangoswami/cash-cli 
 
 ## Contributing
 
