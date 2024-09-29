@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     stages {
@@ -17,14 +18,13 @@ pipeline {
             '''
           }
         }
-        stage('Dokcer image build'){
+        stage('Docker image build'){
           steps{
               echo "Building Docker Image"
-              scripts{
-                withDockerRegistry(credentialsId: '4ccd9c79-9f50-4f84-8953-7819845d9b8d') {
+              script {
+                withDockerRegistry([credentialsId: '4ccd9c79-9f50-4f84-8953-7819845d9b8d', url: 'https://index.docker.io/v1/']) {
                     sh "docker build -t cash-cli ."
                     sh "docker tag cash-cli madhavkrishangoswami/cash-cli:latest"
-                    sh "docker push madhavkrishangoswami/cash-cli:latest"
                 }
               }
           }
@@ -32,12 +32,13 @@ pipeline {
         stage('Deploying to DockerHub'){
           steps{
             echo "Deploying Docker Image"
-            scripts{
-              withDockerRegistry(credentialsId: '4ccd9c79-9f50-4f84-8953-7819845d9b8d') {
+            script {
+                withDockerRegistry([credentialsId: '4ccd9c79-9f50-4f84-8953-7819845d9b8d', url: 'https://index.docker.io/v1/']) {
                   sh "docker push madhavkrishangoswami/cash-cli:latest"
-              }
+                }
             }
           }
         }
     }
 }
+
