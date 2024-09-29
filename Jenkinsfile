@@ -1,13 +1,9 @@
 pipeline {
     agent any
+    tools {
+        Docker "Jenkins-Docker"
+      }
     stages {
-        stage('ls') {
-            steps {
-                sh '''
-                ls 
-                '''
-              }
-          }
         stage('Build') {
             steps {
                 echo "Building.."
