@@ -1,6 +1,6 @@
 module github.com/MadhavKrishanGoswami/Cash-CLI
 
-go 1.23.1
+go 1.23
 
 require github.com/charmbracelet/huh v0.6.0
 
