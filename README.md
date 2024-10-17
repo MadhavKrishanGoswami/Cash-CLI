@@ -16,7 +16,7 @@ This is a command-line interface (CLI) currency converter built with Go. The pro
 
 - [x] Version Control (Git)
 - [x] Containerization (Docker)
-- [ ] CI/CD Pipeline (GitHub Actions)
+- [x] CI/CD Pipeline (GitHub Actions)
 - [ ] Infrastructure as Code (Terraform)
 - [ ] Automated Testing (Go testing package)
 - [ ] Monitoring and Logging (Prometheus & Grafana)
